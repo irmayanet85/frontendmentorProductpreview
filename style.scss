@@ -1,0 +1,173 @@
+@font-face {
+    font-family: MonstserratV;
+    src: url(./font/Montserrat/Montserrat-VariableFont_wght.ttf);
+  }
+@font-face {
+    font-family: MonstserratI;
+    src: url(./font/Montserrat/Montserrat-Italic-VariableFont_wght.ttf);
+  }
+@font-face {
+    font-family: FrauncesI;
+    src: url(./font/Fraunces/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+  }
+@font-face {
+    font-family: FrauncesV;
+    src: url(./font/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+  }
+
+  
+  
+  :root{
+    // ### Primary
+    --DarkCyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --greyBasic: hsl(230, 3%, 65%);
+
+    // ### Neutral
+
+    --VeryDarkBlue: hsl(212, 21%, 14%);
+    --DarkGrayishBlue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    background-color: var(--Cream);
+    font-family: Hanken;
+    font-size: 16px;
+    main {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 100%;
+      .card {
+        width: 37.5rem;
+        height: 28.3125rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-radius: 0.937rem;
+        background: var(--White);
+        .img-card {
+            height: 28.312rem;
+            width: 18.75rem;
+            border-top-left-radius: 0.937rem;
+            border-bottom-left-radius: 0.937rem;
+           
+        }
+        aside {
+            height: 28.312rem;
+            width: 18.75rem;
+            color: var(--greyBasic);
+            padding: 2.25rem;
+            .type{
+                font-family: MonstserratV;
+                font-size: 0.8em;
+                font-weight: 500;
+                letter-spacing: 0.125rem;
+                text-shadow: 0px 0px 1px var(--greyBasic);
+                
+            }
+            .title{
+                font-family: FrauncesV;
+                font-size: 1.75em;
+                font-weight: 700;
+                margin-top: 1.25rem;
+                color: var(--VeryDarkBlue);
+                line-height: 1.9625rem;
+                width: 11.0625rem;
+                text-shadow: 0px 0px 0.187rem var(--greyBasic);
+ 
+    
+            }
+            p {
+                margin-top: 2.25rem;
+                font-family: MonstserratV;
+                font-size: 0.84em;
+                font-weight: 500;
+                letter-spacing: -0.025rem;
+                line-height: 1.39375rem;
+                text-shadow: 0px 0px 0.0625rem var(--greyBasic);
+                width: 12.875rem;
+                margin-bottom: 1.0625rem;
+                
+                
+            }
+            .prices{
+                display: flex;
+                align-items: start;
+
+                .official-price{
+                    
+                    font-family: FrauncesV;
+                    font-size: 2.1em;
+                    font-weight: 700;
+                    color: var(--DarkCyan);
+                }
+                .last-price {
+                    text-decoration: line-through;
+                    margin-left: 0.5rem;
+                    font-size: 0.8125rem;
+                    margin-top: 0.75rem;
+                    margin-left: 0.937rem;
+                    text-shadow: 0px 0px 0.0625rem var(--greyBasic);
+
+    
+                    
+                }
+            }
+            .btn-add {
+                margin-top: 1.31rem;
+                background-color:var(--DarkCyan);
+                width: 100%;
+                height: 3.25rem;
+                color: var(--White);
+                border-radius: 0.5rem;
+                text-shadow: 0px 0px 0.0625rem var(--greyBasic);
+                img {
+                    margin-right: 0.3125rem;
+                }
+
+
+            }
+
+          
+        }
+        
+        
+      }
+    }
+}
+@media (max-width: 601px){
+    body {
+        main {
+
+            .card {
+                height: 94vh;
+                width: 90%;
+                .img-card {
+                    width: 100%;
+                    height: 40vh;
+                    border-top-left-radius: 0.937rem;
+                    border-top-right-radius: 0.937rem;
+                    border-bottom-left-radius: 0px;
+                }
+                aside {
+                    width: 100%;
+                    p {
+                        width: 100%;
+                    }
+                    .title {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }  
+    
+}
